@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
@@ -30,8 +31,8 @@ List<Book> bookList;
 		bookList = this.getAllBookDetails();
 		
 		List<Book> bookById = new ArrayList<>(); 
-		//bookById = bookList.stream().filter(n->n.getId().equals(id)).collect(Collectors.toList());
-		bookList.stream().filter(n->n.getId().equals(id)).forEach(System.out::println);
+		bookById = bookList.stream().filter(n->n.getId().equals(id)).collect(Collectors.toList());
+		//bookList.stream().filter(n->n.getId().equals(id)).forEach(System.out::println);
 		// TODO Auto-generated method stub
 		
 		
@@ -39,7 +40,10 @@ List<Book> bookList;
 //			if(book.getId()==id)
 //				bookById.add(book);
 //		}
-		return bookById;
+		
+	Optional<List<Book>> optional =	Optional.ofNullable(bookById);
+	return optional.get();
+		//return bookById.get(0);
 	} 
 
 	

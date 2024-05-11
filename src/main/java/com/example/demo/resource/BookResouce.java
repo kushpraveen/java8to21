@@ -28,8 +28,10 @@ public class BookResouce {
 	@GetMapping("/booksDetailById" )
 	public List<Book> getAllBookDetails(@RequestParam String id){
 	
-		List<Book> bookdetails = bookDetailsService.getbookById(id);
+	List<Book> result = bookDetailsService.getbookById(id);
+	System.out.println(result);
+		return bookDetailsService.getbookById(id);
 		
-		return bookdetails;
+		//return bookdetails;
 	}
 }
