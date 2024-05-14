@@ -36,10 +36,6 @@ List<Book> bookList;
 		// TODO Auto-generated method stub
 		
 		
-//		for (Book book : bookList) {
-//			if(book.getId()==id)
-//				bookById.add(book);
-//		}
 		
 	Optional<List<Book>> optional =	Optional.ofNullable(bookById);
 	return optional.get();

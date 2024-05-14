@@ -12,26 +12,25 @@ import com.example.demo.service.BookDetailsService;
 
 @RestController
 public class BookResouce {
-	
+
 	@Autowired
 	public BookDetailsService bookDetailsService;
-	
+
 	@GetMapping("/booksDetail")
-	public List<Book> getAllBookDetails(){
-	
+	public List<Book> getAllBookDetails() {
+
 		List<Book> bookdetails = bookDetailsService.getAllBookDetails();
-		
+
 		return bookdetails;
 	}
 
-	
-	@GetMapping("/booksDetailById" )
-	public List<Book> getAllBookDetails(@RequestParam String id){
-	
-	List<Book> result = bookDetailsService.getbookById(id);
-	System.out.println(result);
+	@GetMapping("/booksDetailById")
+	public List<Book> getAllBookDetails(@RequestParam String id) {
+
+		List<Book> result = bookDetailsService.getbookById(id);
+		System.out.println(result);
 		return bookDetailsService.getbookById(id);
-		
-		//return bookdetails;
+
+		// return bookdetails;
 	}
 }
