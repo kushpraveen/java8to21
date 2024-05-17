@@ -1,13 +1,7 @@
 package com.example.demo;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.example.demo.entity.Book;
 
 @SpringBootApplication(scanBasePackages = {"com.example.demo.*"})
 public class DemoApplication {
@@ -15,15 +9,15 @@ public class DemoApplication {
 	public static void main(String[] args) {
 	SpringApplication.run(DemoApplication.class, args);
 //		DemoApplication demoApplication = new DemoApplication();
-//		
+////		
 //		List<Book> books = 	demoApplication.getbookById("2");
-//		System.out.println(books.get(0).getDesc());
+//		System.out.println(books.getFirst().getName());
 		
 	}
 	
-
-List<Book> bookList;
-	//@Override
+//
+//List<Book> bookList;
+//	//@Override
 //	public List<Book> getAllBookDetails() {
 //		// TODO Auto-generated method stub
 //		bookList = new ArrayList<Book>();
@@ -34,7 +28,7 @@ List<Book> bookList;
 //		
 //		return bookList;
 //	}
-	//@Override
+//	//@Override
 //	public List<Book> getbookById(String id) {
 //		bookList = this.getAllBookDetails();
 //		
